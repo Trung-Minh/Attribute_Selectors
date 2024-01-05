@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Selector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ol style="font-weight: bold; font-size: 20px">
+      <li>
+        <h1>[attribute]</h1>
+        <p>Chọn tất cả thẻ có thuộc tính (property)</p>
+        <h5>Ví dụ :</h5>
+        <p>
+          <b>[href]</b> : Chọn tất cả thẻ có thuộc tính :
+          <span style="color: red; font-style: italic"><b>href</b></span>
+        </p>
+        <h5>Ví dụ 2 :</h5>
+        <a href="">Click 1</a>
+        <a href="">Click 2</a>
+        <a href="">Click 3</a>
+        <a href="">Click vào em</a>
+        <p href="">Lorem ipsum dolor sit amet.</p>
+      </li>
+      <li>
+        <h1>[attribute=value]</h1>
+        <p>Chọn tất cả các thuộc tính có tính chính xác giá trị</p>
+        <h5>Ví dụ :</h5>
+        <p>
+          <b style="color: blue">[target="_blank"]</b> : chọn tất cả các thuộc
+          tính có tính chính xác giá trị :
+          <span style="color: blue">target="_blank"</span>
+        </p>
+        <h5>Ví dụ 2 :</h5>
+        <a href="https://google.com" target="_blank">Click 1</a>
+        <a href="https://google.com" target="_self">Click 2</a>
+        <a href="https://google.com">Click 3</a>
+      </li>
+      <li>
+        <h1>[attribute~=value]</h1>
+        <p>
+          Chọn tất cả các thuộc tính : <span>attribute</span> có chứa
+          <span class="nhan_Manh">từ</span>
+          <span>value</span>
+          trong giá trị và từ value phải đứng đơn lẻ
+        </p>
+        <h5>Ví dụ :</h5>
+        <p><span>[title~="pic"]</span> : title có chứa pic trong giá trị</p>
+        <h5>Ví đụ 2 :</h5>
+        <a href="" target="_blank" title="Le Minh Trung">Click đê 1</a>
+        <a href="" title="Le Thi Anh Thu">Click đê 2</a>
+        <a href="" title="Lee Co cai nit">Click đê 3</a>
+      </li>
+      <li>
+        <h1>[attribute*=value]</h1>
+        <p>
+          Chọn tất cả các thuộc tính : <span>attribute</span> có chứa
+          <span class="nhan_Manh">chuỗi</span> <span>value</span> trong giá trị
+        </p>
+        <h5>Ví dụ :</h5>
+        <p>
+          <span>[title*="pic"]</span> : <span>title</span> có chứa chuỗi
+          <span>pic</span> trong giá trị
+        </p>
+        <h5>Ví dụ 2 :</h5>
+        <a href="" title="Le Minh Trung">Click vào đây 1</a>
+        <a href="" title="LeThiAnhThu">Click vào đây 2</a>
+        <a href="" title="LeeTrung">Click vào đây 3</a>
+      </li>
+      <li>
+        <h1>[attribute|=value]</h1>
+        <p>
+          Chọn tất cả các thuộc tính : <span>attribute</span
+          ><span class="nhan_Manh"> có một từ duy nhất</span> bắt đầu bằng
+          <span>value</span> hoặc một cụm từ phải được nối với nhau bằng dấu
+          gạch ngang
+        </p>
+      </li>
+      <h5>Ví dụ :</h5>
+      <p>
+        <span>[title|="pic"]</span> : title có 1 từ duy nhất và bắt đầu bằng pic
+        : pic, pic-123
+      </p>
+      <h5>Ví dụ 2 :</h5>
+      <a href="" title="Le le le">Lorem 1</a>
+      <a href="" title="LeThu">Lorem, ipsum 2</a>
+      <a href="" title="Le-Trung">Lorem, ipsum dolor 3</a>
+      <li>
+        <h1>[attribute^=value]</h1>
+        <p>
+          Chọn tất cả các thuộc tính : attribute bắt đầu bằng từ
+          <span>value (không quan tâm đến space ở sau)</span>
+        </p>
+        <h5>Ví dụ :</h5>
+        <p>
+          <span>[title^="pic"]</span> : chọn tất cả thuộc tính title bắt đầu
+          bằng từ pic
+        </p>
+        <h5>Ví dụ 2 :</h5>
+        <a href="" title="pic123">Click 11</a>
+        <a href="" title="pic pic">Click 12</a>
+        <a href="" title="pic-123">Click 13</a>
+      </li>
+      <li>
+        <h1>[attribute$=value]</h1>
+        <p>
+          Chọn tất cả các thẻ có thuộc tính <span>attribute</span> kết thúc bằng
+          <span>kí tự value</span>
+        </p>
+        <h5>Ví dụ :</h5>
+        <p>
+          <span>[title$="1"</span> : chọn tất cả thẻ title kết thúc bằng kí tự 1
+        </p>
+        <h5>Ví dụ 2 :</h5>
+        <a href="" title="LeMinhTrung">Click click 1</a>
+        <a href="" title="Le-Trung">Click click 2</a>
+        <a href="" title="Trung">Click click 3</a>
+        <a href="" title="Thu Trung">Click click 4</a>
+      </li>
+      <li>
+        <h1>Tóm tắt Attribute</h1>
+
+        <!-- Dùng bảng để tóm tắt -->
+        <table>
+          <thead>
+            <th>STT</th>
+            <th class="col_2" style="color: black">Cú pháp</th>
+            <th class="col_2" style="color: black">Ví dụ</th>
+            <th>Ý nghĩa</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="stt">1</td>
+              <td class="col_2">[<span>attribute</span>]</td>
+              <td class="col_2" style="color: blue">[href]</td>
+              <td>Chọn tất cả thẻ có thuộc tính <span>attribute</span></td>
+            </tr>
+            <tr>
+              <td class="stt">2</td>
+              <td class="col_2">[attribute<span>=</span>value]</td>
+              <td class="col_22">[target="_blank"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính chính xác về giá trị :
+                <span>value</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="stt">3</td>
+              <td class="col_2">[attribute<span>~=</span>value]</td>
+              <td class="col_22">[title~="pic"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính : <span>attribute</span> có
+                chứa <span>value</span> trong giá trị
+              </td>
+            </tr>
+            <tr>
+              <td class="stt">4</td>
+              <td class="col_2">[attribute<span>*=</span>value]</td>
+              <td class="col_22">[title*="pic"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính: <span>attribute</span> có
+                chứa chuỗi <span>value</span> trong giá trị
+              </td>
+            </tr>
+            <tr>
+              <td class="stt">5</td>
+              <td class="col_2">[attribute<span>|=</span>value]</td>
+              <td class="col_22">[title|="pic"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính :
+                <span>attribute duy nhất</span>
+                bắt đầu bằng <span>value</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="stt">6</td>
+              <td class="col_2">[attribute<span>^=</span>value]</td>
+              <td class="col_22">[title^="pic"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính:
+                <span>attribute bắt đầu bằng value</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="stt">7</td>
+              <td class="col_2">[attribute<span>$=</span>value]</td>
+              <td class="col_22">[title$="1"]</td>
+              <td>
+                Chọn tất cả các thẻ có thuộc tính:
+                <span>attribute kết thúc bằng kí tự value</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ol>
+  </body>
+</html>

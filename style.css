@@ -1,0 +1,74 @@
+p[href] {
+  /* Tác động lên thẻ a có thuộc tính là href */
+  color: red;
+  font-style: italic;
+}
+
+[target="_self"] {
+  color: pink;
+}
+
+[target="_blank"] {
+  font-style: italic;
+}
+
+span {
+  color: blue;
+  font-weight: bold;
+}
+
+[title~="Le"] {
+  /* Chọn những title có từ Le */
+  color: red;
+}
+
+.nhan_Manh {
+  color: red;
+  font-size: 25px;
+}
+
+[title*="Le"] {
+  /* Chọn những title chứ chuỗi Le */
+  color: black;
+  font-weight: bold;
+}
+
+[title|="Le"] {
+  /* Chọn những title bắt đầu bằng Le và có duy nhất 1 từ
+   hoặc Le phải có gạch nối với từ tiếp theo*/
+  color: rgb(137, 123, 150);
+  font-size: 20px;
+}
+
+[title^="pic"] {
+  /* Chọn tất cả các title bắt đầu bằng pic */
+  color: yellowgreen;
+}
+
+[title$="Trung"] {
+  /* Chọn tất cả các thẻ có value kết thúc là "Trung" */
+  color: aqua;
+}
+
+.col_2 {
+  color: red;
+}
+.col_22 {
+  color: blue;
+}
+.stt,
+th {
+  text-align: center;
+}
+
+th,
+td,
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+.stt {
+  background-color: rgb(91, 91, 253);
+}
